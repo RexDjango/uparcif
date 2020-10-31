@@ -1,0 +1,53 @@
+body {
+  color: #666666;
+  font-size: 15px;
+  font-family: "Catamaran", sans-serif;
+  line-height: 1.80857;
+  background-color: rgba(0, 0, 0, 0.06);
+}
+
+#part1 {
+  border: 1px solid rgb(43, 106, 182);
+}
+
+#part1 .part1-title {
+  background-color: rgb(28, 44, 126);
+  padding: 10px 20px;
+  font-weight: 500;
+}
+
+#part1 h5 {
+  color: #fff;
+}
+
+@media (min-width: 1300px) {
+  .container,
+  .container-lg,
+  .container-md,
+  .container-sm,
+  .container-xl {
+    max-width: 1300px !important;
+  }
+}
+
+.card-header {
+  padding: 0px !important;
+}
+
+.btn-primary {
+  background-color: rgb(43, 106, 182);
+}
+
+.content-header {
+  background-color: rgb(104, 161, 230);
+  padding: 5px 10px;
+  color: white;
+}
+
+.blue {
+  color: red;
+}
+
+.navbar {
+  box-shadow: 0px 3px 6px 3px rgba(0, 0, 0, 0.06);
+}
