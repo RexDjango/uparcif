@@ -23,9 +23,9 @@ BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 SECRET_KEY = '4vbw14qy#i@9a2+4_yv=$*_m95m!&iff0i%%7ro904j$9o=y9!'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG = False
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['uparcif.herokuapp.com', '127.0.0.1']
 
 
 # Application definition
@@ -124,3 +124,4 @@ STATICFILES_DIRS = [
 ]
 
 MEDIA_ROOT = os.path.join(BASE_DIR, 'media/')
+
