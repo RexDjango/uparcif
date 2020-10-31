@@ -1,0 +1,409 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<div class="col-md-12 mb-3">
+    <div id="part1">
+        <header class="part1-title">
+            <h5><i class="fas fa-file-alt    "></i>
+                Case Investigation Form
+            </h5>
+        </header>
+        <form class="form p-3">
+            <div class="accordion" id="accordionExample">
+                <div class="card">
+                    <div class="card-header" id="headingOne">
+                        <h2 class="mb-0">
+                            <button class="btn btn-primary btn-block text-left pt-3 pb-3" type="button"
+                                data-toggle="collapse" data-target="#collapseOne" aria-expanded="true"
+                                aria-controls="collapseOne">
+                                PART 1: Patient information <i class="fas fa-caret-down float-right"></i>
+                            </button>
+                        </h2>
+                    </div>
+
+                    <div id="collapseOne" class="collapse show" aria-labelledby="headingOne"
+                        data-parent="#accordionExample">
+                        <div class="card-body">
+                            <header class="content-header mb-2">
+                                <h6>1.1 Patient Profile</h6>
+                            </header>
+                            <div class="row">
+                                <div class="col-md-3 pb-2">
+                                    <input type="text" class="form-control" placeholder="Last Name *" name="last_name"
+                                        required />
+                                </div>
+                                <div class="col-md-3 pb-2">
+                                    <input type="text" class="form-control" placeholder="First Name (Suffix)*"
+                                        name="first_name" required />
+                                </div>
+                                <div class="col-md-3 pb-2">
+                                    <input type="text" class="form-control" placeholder="Middle Name" name="middle_name"
+                                        required />
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-md-3 pb-2">
+                                    <input type="text" class="form-control" placeholder="Birthday (MM/DD/YYYY)"
+                                        name="bday" />
+                                </div>
+                                <div class="col-md-3 pb-2">
+                                    <input type="text" class="form-control" placeholder="Age" name="age" />
+                                </div>
+                                <div class="col-md-3 pb-2">
+                                    <select id="gender" name="gender" class="form-control">
+                                        <option value="Choose Gender">Gender</option>
+                                        <option value="male">Male</option>
+                                        <option value="female">Female</option>
+                                    </select>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-md-2 pb-2">
+                                    <select id="cstatus" name="cstatus" class="form-control">
+                                        <option value="Choose Status">Civil Status</option>
+                                        <option value="single">Single</option>
+                                        <option value="married">Married</option>
+                                    </select>
+                                </div>
+                                <div class="col-md-2 pb-2">
+                                    <select id="cstatus" name="cstatus" class="form-control">
+                                        <option value="Choose Status">Nationality</option>
+                                        <option value="single">Filipino</option>
+                                        <option value="married">American</option>
+                                    </select>
+                                </div>
+                                <div class="col-md-2 pb-2">
+                                    <input type="text" class="form-control" placeholder="Occupation"
+                                        name="occupation" />
+                                </div>
+                                <div class="col-md-2 pb-2">
+                                    <input type="text" class="form-control" placeholder="Passport No."
+                                        name="passportno" />
+                                </div>
+                            </div>
+                            <header class="content-header mb-2">
+                                <h6>1.2 Travel Detail (Departure from Philippines)</h6>
+                            </header>
+                            <div class="row">
+                                <div class="col-md-4 pb-2">
+                                    <input type="text" class="form-control" placeholder="Airline / Sea Vessel"
+                                        name="last_name" />
+                                </div>
+                                <div class="col-md-4 pb-2">
+                                    <input type="text" class="form-control" placeholder="Flight / Vessel No."
+                                        name="first_name" />
+                                </div>
+                                <div class="col-md-4 pb-2">
+                                    <input type="text" class="form-control" placeholder="Country of Destination"
+                                        name="middle_name" />
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="accordion" id="accordionExampleTwo">
+                <div class="card">
+                    <div class="card-header" id="headingTwo">
+                        <h2 class="mb-0">
+                            <button class="btn btn-primary btn-block text-left collapsed pt-3 pb-3" type="button"
+                                data-toggle="collapse" data-target="#collapseTwo" aria-expanded="false"
+                                aria-controls="collapseTwo">
+                                PART 2: Address information <i class="fas fa-caret-down float-right"></i>
+                            </button>
+                        </h2>
+                    </div>
+                    <div id="collapseTwo" class="collapse show" aria-labelledby="headingTwo"
+                        data-parent="#accordionExampleTwo">
+                        <div class="card-body">
+                            <header class="content-header mb-2">
+                                <h6> 2.1 Permanent Address </h6>
+                            </header>
+                            <div class="row">
+                                <div class="col-md-3 pb-2">
+                                    <input type="text" class="form-control" placeholder="Province" name="last_name" />
+                                </div>
+                                <div class="col-md-3 pb-2">
+                                    <input type="text" class="form-control" placeholder="Municipality/City"
+                                        name="first_name" />
+                                </div>
+                                <div class="col-md-3 pb-2">
+                                    <input type="text" class="form-control" placeholder="Barangay" name="middle_name" />
+                                </div>
+                                <div class="col-md-3 pb-2">
+                                    <input type="text" class="form-control" placeholder="Street" name="middle_name" />
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-md-4 pb-2">
+                                    <input type="text" class="form-control" placeholder="House No./Lot/Bldg."
+                                        name="last_name" />
+                                </div>
+                                <div class="col-md-4 pb-2">
+                                    <input type="text" class="form-control" placeholder="Home Phone No."
+                                        name="first_name" />
+                                </div>
+                                <div class="col-md-4 pb-2">
+                                    <input type="text" class="form-control" placeholder="Cellphone No."
+                                        name="middle_name" />
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-md-6 pb-2">
+                                    <input type="text" class="form-control" placeholder="Email Address"
+                                        name="last_name" />
+                                </div>
+                                <div class="col-md-6 pb-2">
+                                    <input type="text" class="form-control" placeholder="Confirm Email Address"
+                                        name="first_name" />
+                                </div>
+                            </div>
+
+                            <header class="content-header mb-2">
+                                <h6>2.2 Current Address</h6>
+                            </header>
+                            <div class="row">
+                                <div class="col-md-3 pb-2">
+                                    <input type="text" class="form-control" placeholder="Province" name="last_name" />
+                                </div>
+                                <div class="col-md-3 pb-2">
+                                    <input type="text" class="form-control" placeholder="Municipality/City"
+                                        name="first_name" />
+                                </div>
+                                <div class="col-md-3 pb-2">
+                                    <input type="text" class="form-control" placeholder="Barangay" name="middle_name" />
+                                </div>
+                                <div class="col-md-3 pb-2">
+                                    <input type="text" class="form-control" placeholder="Street" name="middle_name" />
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-md-4 pb-2">
+                                    <input type="text" class="form-control" placeholder="House No./Lot/Bldg."
+                                        name="last_name" />
+                                </div>
+                                <div class="col-md-4 pb-2">
+                                    <input type="text" class="form-control" placeholder="Home Phone No."
+                                        name="first_name" />
+                                </div>
+                                <div class="col-md-4 pb-2">
+                                    <input type="text" class="form-control" placeholder="Cellphone No."
+                                        name="middle_name" />
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-md-6 pb-2">
+                                    <input type="text" class="form-control" placeholder="Email Address"
+                                        name="last_name" />
+                                </div>
+                                <div class="col-md-6 pb-2">
+                                    <input type="text" class="form-control" placeholder="Confirm Email Address"
+                                        name="first_name" />
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+
+            <div class="accordion" id="accordionExampleThree">
+                <div class="card">
+                    <div class="card-header" id="headingThree">
+                        <h2 class="mb-0">
+                            <button class="btn btn-primary btn-block text-left pt-3 pb-3" type="button"
+                                data-toggle="collapse" data-target="#collapseThree" aria-expanded="false"
+                                aria-controls="collapseThree">
+                                PART 3: CIF Information<i class="fas fa-caret-down float-right"></i>
+                            </button>
+                        </h2>
+                    </div>
+                    <div id="collapseThree" class="collapse show" aria-labelledby="headingThree"
+                        data-parent="#accordionExampleThree">
+                        <div class="card-body">
+                            <header class="content-header mb-2">
+                                <h6> 3.2. Overseas Employment Address (for Overseas Filipino Workers)</h6>
+                            </header>
+                            <div class="row">
+                                <div class="col-md-12 pb-2">
+                                    <label>OFW</label>
+                                    <label class="ofwradio ml-3">
+                                        <input type="radio" checked="checked" name="ofwradio">
+                                        <span class="checkmark"></span>YES
+                                    </label>
+                                    <label class="ofwradio ml-2">
+                                        <input type="radio" name="ofwradio">
+                                        <span class="checkmark"></span>NO
+                                    </label>
+                                </div>
+                            </div>
+
+                            <header class="content-header mb-2">
+                                <h6> 3.3. Travel History </h6>
+                            </header>
+                            <p>History of travel/visit/work in other countries with a known COVID-19 transmission 14
+                                days before the onset on signs and symptoms</p>
+                            <div class="row">
+                                <div class="col-md-9 pb-2">
+                                    <label class="travelhis ml-3">
+                                        <input type="radio" checked="checked" name="travelhis">
+                                        <span class="checkmark"></span>YES
+                                    </label>
+                                    <label class="travelhis ml-2">
+                                        <input type="radio" name="travelhis">
+                                        <span class="checkmark"></span>NO
+                                    </label>
+                                    <label class="travelhis ml-2">
+                                        <input type="radio" name="travelhis">
+                                        <span class="checkmark"></span>Unknown
+                                    </label>
+                                </div>
+                                <div class="col-md-3 pb-2">
+                                    <input type="text" class="form-control" placeholder="Country of exit"
+                                        name="first_name" />
+                                </div>
+                            </div>
+
+                            <div class="row">
+                                <div class="col-md-2 pb-2">
+                                    <input type="text" class="form-control" placeholder="Airline/Sea vessel"
+                                        name="last_name" />
+                                </div>
+                                <div class="col-md-2 pb-2">
+                                    <input type="text" class="form-control" placeholder="Flight/Vessel Number"
+                                        name="first_name" />
+                                </div>
+                                <div class="col-md-4 pb-2">
+                                    <input type="text" class="form-control"
+                                        placeholder="Date of Contact with Known  CoViD-19 Case*" name="middle_name" />
+                                </div>
+                                <div class="col-md-4 pb-2">
+                                    <input type="text" class="form-control"
+                                        placeholder="Date of Contact with Known  CoViD-19 Case*" name="middle_name" />
+                                </div>
+                            </div>
+
+                            <header class="content-header mb-2">
+                                <h6> 3.4. Exposure History </h6>
+                            </header>
+                            <p>
+                                History of Exposure to Known CoViD-19 Case 14 days before the onset sign and symptoms
+                            </p>
+                            <div class="row">
+                                <div class="col-md-8 pb-2">
+                                    <label class="expohis ml-3">
+                                        <input type="radio" checked="checked" name="expohis">
+                                        <span class="expomark"></span>YES
+                                    </label>
+                                    <label class="expohis ml-2">
+                                        <input type="radio" name="expohis">
+                                        <span class="expomark"></span>NO
+                                    </label>
+                                    <label class="expohis ml-2">
+                                        <input type="radio" name="expohis">
+                                        <span class="expomark"></span>Unknown
+                                    </label>
+                                </div>
+                                <div class="col-md-4">
+                                    <input type="text" class="form-control"
+                                        placeholder="Date of Contact with Known  CoViD-19 Case*" name="first_name" />
+                                </div>
+                            </div>
+                            <p>
+                                Have you been in a place with known CoViD-19 transmission 14 days before the onset sign
+                                and
+                                symptoms
+                            </p>
+                            <div class="row">
+                                <div class="col-md-8 pb-2">
+                                    <label class="expohis ml-3">
+                                        <input type="radio" checked="checked" name="trans">
+                                        <span class="expomark"></span>YES
+                                    </label>
+                                    <label class="expohis ml-2">
+                                        <input type="radio" name="trans">
+                                        <span class="expomark"></span>NO
+                                    </label>
+                                    <label class="expohis ml-2">
+                                        <input type="radio" name="trans">
+                                        <span class="expomark"></span>Unknown
+                                    </label>
+                                </div>
+                                <div class="col-md-4">
+                                    <input type="text" class="form-control"
+                                        placeholder="Date of Contact with Known  CoViD-19 Case*" name="first_name" />
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-md-2 pb-2">
+                                    <label class="check">WorkPlace
+                                        <input type="checkbox" checked="checked">
+                                        <span class="checkmark"></span>
+                                    </label>
+                                </div>
+                                <div class="col-md-2 pb-2">
+                                    <label class="check">HealthFacility
+                                        <input type="checkbox">
+                                        <span class="checkmark"></span>
+                                    </label>
+                                </div>
+                                <div class="col-md-2 pb-2">
+                                    <label class="check">SocialGathering
+                                        <input type="checkbox">
+                                        <span class="checkmark"></span>
+                                    </label>
+                                </div>
+                                <div class="col-md-2 pb-2">
+                                    <label class="check">ReligiousGathering
+                                        <input type="checkbox">
+                                        <span class="checkmark"></span>
+                                    </label>
+                                </div>
+                                <div class="col-md-4">
+                                    <input type="text" class="form-control" placeholder="Other(specify type)"
+                                        name="first_name" />
+                                </div>
+                            </div>
+
+                            <div class="row">
+                                <div class="col-md-8 pb-2">
+                                    <input type="text" class="form-control" placeholder="Name of the place"
+                                        name="first_name" />
+                                </div>
+                            </div>
+                            <p>
+                                List the names of persons who were with you during this occasion(s) and their contact
+                                numbers: Use the back part of this sheet if needed
+                            </p>
+                            <p class="blue">You can leave it blank if none.</p>
+                            <div class="row">
+                                <div class="col-md-4 pb-2">
+                                    <input type="text" class="form-control"
+                                        placeholder="Name of Informant (If patient unavailable)" name="first_name" />
+                                </div>
+                                <div class="col-md-4 pb-2">
+                                    <input type="text" class="form-control" placeholder="Relationship"
+                                        name="first_name" />
+                                </div>
+                                <div class="col-md-4 pb-2">
+                                    <input type="text" class="form-control" placeholder="Contact No."
+                                        name="first_name" />
+                                </div>
+                            </div>
+
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+            <hr />
+
+            <button type="submit" class="btn btn-primary">Submit</button>
+    </div>
+
+    </form>
+
+</div>
+</div>
+{% endblock content %}
